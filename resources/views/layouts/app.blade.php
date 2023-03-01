@@ -71,7 +71,33 @@
                 </div>
             </div>
         </nav>
-
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        latihan 1
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{url('master-data/edit-brand/table')}}">eBrand</a>
+                        <a class="dropdown-item" href="{{url('master-data/edit-kategori/table')}}">eKategori</a>
+                        <a class="dropdown-item" href="{{url('master-data/satuan/table')}}">Satuan</a>
+                        <a class="dropdown-item" href="{{url('master-barang/index/table')}}">Index</a>
+                        <a class="dropdown-item" href="{{url('master-barang/add-barang/table')}}">Add Barang</a>
+                        <a class="dropdown-item" href="{{url('master-barang/request-stock/table')}}">Request Stock</a>
+                        <a class="dropdown-item" href="{{url('transaksi/barang-masuk/table')}}">Barang Masuk</a>
+                        <a class="dropdown-item" href="{{url('transaksi/barang-keluar/table')}}">Barang Keluar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        latihan 2
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{url('multiple/2')}}">Multiple</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <main class="py-4">
             @yield('content')
         </main>
