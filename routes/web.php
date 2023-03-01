@@ -61,6 +61,23 @@ Route::prefix('master-barang/index')->group(function () {
     Route::get('delete/{id}', 'laravelcss\Index\IndexController@destroy')->name('delete.index');
 });
 
+//master-barang -> index -> multiple
+// Route::prefix('multiple')->group(function () {
+//     Route::get('table', 'multiple\IndexMultiple\IndexMultipleController@index')->name('tampilan.indexmultiple');
+//     Route::get('create', 'multiple\IndexMultiple\IndexMultipleController@create')->name('create.indexmultiple');
+//     Route::post('simpan', 'multiple\IndexMultiple\IndexMultipleController@store')->name('simpan.indexmultiple');
+//     Route::get('edit/{id}', 'multiple\IndexMultiple\IndexMultipleController@edit')->name('edit.indexmultiple');
+//     Route::post('update/{id}', 'multiple\IndexMultiple\IndexMultipleController@update')->name('update.indexmultiple');
+//     Route::get('delete/{id}', 'multiple\IndexMultiple\IndexMultipleController@destroy')->name('delete.indexmultiple');
+// });
+
+Route::prefix('multiple')->group(function () {
+    route::get('2','multiple\MultipleController@index')->name('latihan.2');
+    route::get('create/multiple','multiple\MultipleController@create')->name('latihan.create.multiple');
+    route::post('store/multiple','multiple\MultipleController@store')->name('latihan.store.multiple');
+    route::get('edit/multiple/{book}','multiple\MultipleController@edit')->name('latihan.edit.multiple');    
+});
+
 //master-barang -> add barang
 Route::prefix('master-barang/add-barang')->group(function () {
     Route::get('table', 'laravelcss\Add\AddController@index')->name('tampilan.add');
